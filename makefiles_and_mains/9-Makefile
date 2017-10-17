@@ -1,0 +1,16 @@
+CC = gcc
+SRC = 9-main.c 9-binary_tree_height.c 3-binary_tree_delete.c 2-binary_tree_insert_right.c 0-binary_tree_node.c binary_tree_print.c
+OBJ = $(SRC:%.c=%.o)
+NAME = 9-exec
+CFLAGS = -Wall -Werror -Wextra -pedantic
+RM = rm -f
+%.o: %.c binary_trees.h
+	$(CC) $(CFLAGS) -c -o $@ $<
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+clean:
+	$(RM) *~ $(NAME)
+oclean:
+	$(RM) $(OBJ)
+fclean: clean oclean
+re: oclean all
