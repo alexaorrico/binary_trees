@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "binary_trees.h"
+#include "../binary_trees.h"
 
 /**
  * main - Entry point
@@ -26,5 +26,6 @@ int main(void)
     printf("Is %d full: %d\n", root->left->n, full);
     full = binary_tree_is_full(root->right);
     printf("Is %d full: %d\n", root->right->n, full);
+    binary_tree_delete(root);
     return (0);
 }

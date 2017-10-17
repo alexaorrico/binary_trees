@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "binary_trees.h"
+#include "../binary_trees.h"
 
 /**
  * main - Entry point
@@ -29,5 +29,6 @@ int main(void)
     printf("Balance of %d: %+d\n", root->right->n, balance);
     balance = binary_tree_balance(root->left->left->right);
     printf("Balance of %d: %+d\n", root->left->left->right->n, balance);
+    binary_tree_delete(root);
     return (0);
 }

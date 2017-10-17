@@ -1,10 +1,10 @@
 CC = gcc
-SRC = 8-main.c 8-binary_tree_postorder.c 3-binary_tree_delete.c 0-binary_tree_node.c binary_tree_print.c
+SRC = 8-main.c ../8-binary_tree_postorder.c ../3-binary_tree_delete.c ../0-binary_tree_node.c ../binary_tree_print.c
 OBJ = $(SRC:%.c=%.o)
 NAME = 8-exec
 CFLAGS = -Wall -Werror -Wextra -pedantic
 RM = rm -f
-%.o: %.c binary_trees.h
+%.o: %.c ../binary_trees.h
 	$(CC) $(CFLAGS) -c -o $@ $<
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)

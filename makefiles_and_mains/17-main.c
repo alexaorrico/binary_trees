@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "binary_trees.h"
+#include "../binary_trees.h"
 
 /**
  * main - Entry point
@@ -31,5 +31,6 @@ int main(void)
     printf("Sibling of %d: %d\n", root->left->right->n, sibling->n);
     sibling = binary_tree_sibling(root);
     printf("Sibling of %d: %p\n", root->n, (void *)sibling);
+    binary_tree_delete(root);
     return (0);
 }

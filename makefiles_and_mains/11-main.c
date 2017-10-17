@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "binary_trees.h"
+#include "../binary_trees.h"
 
 /**
  * main - Entry point
@@ -25,5 +25,6 @@ int main(void)
     printf("Size of %d: %lu\n", root->right->n, size);
     size = binary_tree_size(root->left->right);
     printf("Size of %d: %lu\n", root->left->right->n, size);
+    binary_tree_delete(root);
     return (0);
 }

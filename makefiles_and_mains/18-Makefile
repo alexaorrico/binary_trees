@@ -1,5 +1,5 @@
 CC = gcc
-SRC = 18-main.c 18-binary_tree_uncle.c 3-binary_tree_delete.c 2-binary_tree_insert_right.c 0-binary_tree_node.c binary_tree_print.c
+SRC = 18-main.c ../18-binary_tree_uncle.c ../3-binary_tree_delete.c ../2-binary_tree_insert_right.c ../0-binary_tree_node.c ../binary_tree_print.c
 OBJ = $(SRC:%.c=%.o)
 NAME = 18-exec
 CFLAGS = -Wall -Werror -Wextra -pedantic

@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "binary_trees.h"
+#include "../binary_trees.h"
 
 /**
  * main - Entry point
@@ -25,5 +25,6 @@ int main(void)
     printf("Height from %d: %lu\n", root->right->n, height);
     height = binary_tree_height(root->left->right);
     printf("Height from %d: %lu\n", root->left->right->n, height);
+    binary_tree_delete(root);
     return (0);
 }

@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "binary_trees.h"
+#include "../binary_trees.h"
 
 /**
  * main - Entry point
@@ -25,5 +25,6 @@ int main(void)
     printf("Nodes in %d: %lu\n", root->right->n, nodes);
     nodes = binary_tree_nodes(root->left->right);
     printf("Nodes in %d: %lu\n", root->left->right->n, nodes);
+    binary_tree_delete(root);
     return (0);
 }
