@@ -72,7 +72,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 	if (binary_tree_is_leaf(tree))
-		return(1);
+		return (1);
 	l = tree->left;
 	r = tree->right;
 	l_height = binary_tree_height(l);
@@ -82,7 +82,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 		if (binary_tree_is_perfect(l) && binary_tree_is_complete(r))
 			return (1);
 	}
-	else if(l_height == r_height + 1)
+	else if (l_height == r_height + 1)
 	{
 		if (binary_tree_is_complete(l) && binary_tree_is_perfect(r))
 			return (1);
